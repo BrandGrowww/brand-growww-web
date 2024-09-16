@@ -1,0 +1,42 @@
+﻿.dynamic-text-letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.2s forwards;
+    animation-delay: var(--animation-delay);
+}
+.q{
+    color:white;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#dynamic-text-container {
+    font-size: 40px;
+}
+
+@media (max-width: 1200px) {
+    #dynamic-text-container {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    #dynamic-text-container {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #dynamic-text-container {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    #dynamic-text-container {
+        font-size: 15px;
+    }
+}
