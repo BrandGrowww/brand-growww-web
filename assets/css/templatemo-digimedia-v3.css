@@ -1351,17 +1351,17 @@ Services Style
   margin-bottom: 25px;
 }
 
-.services .nacc .thumb .main-white-button {
+.services .nacc .thumb .main-var(--white)-button {
   text-align: right;
   margin-top: 40px;
 }
 
-.services .nacc .thumb .main-white-button a {
+.services .nacc .thumb .main-var(--white)-button a {
   background-color: #8d99af;
   color: #fff;
 }
 
-.services .nacc .thumb .main-white-button a i {
+.services .nacc .thumb .main-var(--white)-button a i {
   background-color: #fff;
   color: #8d99af;
 }
@@ -2062,7 +2062,7 @@ responsive
   .about-us .section-heading,
   .about-us .about-item,
   .about-us p,
-  .about-us .main-green-button {
+  .about-us .main-var(--green)-button {
     text-align: center;
   }
   .our-portfolio .section-heading .line-dec {

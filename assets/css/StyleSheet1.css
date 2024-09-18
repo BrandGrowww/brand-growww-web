@@ -5,7 +5,7 @@
     animation-delay: var(--animation-delay);
 }
 .q{
-    color:black;
+    color:var(--black);
 }
 @keyframes fadeIn {
     to {
