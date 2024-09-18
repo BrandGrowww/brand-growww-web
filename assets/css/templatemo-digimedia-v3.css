@@ -2,7 +2,7 @@
 
 TemplateMo 568 DigiMedia
 
-https://templatemo.com/tm-568-digimedia
+https://templatemo.com/tm-568-DigiMedia
 
 */
 
@@ -1029,7 +1029,7 @@ About Style
 }
 
 .second-skill-item .progress .progress-bar {
-  border-color: #726ae3;
+  border-color: var(--blue);
 }
 
 .third-skill-item .progress .progress-bar {

@@ -123,3 +123,27 @@ function changeDynamicText() {
 }
 setInterval(changeDynamicText, 5000);
 changeDynamicText();
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.stats__count');
+
+    
+    const speeds = [200, 30000, 1000, 2500];
+
+    counters.forEach((counter, index) => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const increment = target / speeds[index];
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 50);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    });
+});
