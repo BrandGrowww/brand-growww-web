@@ -5210,7 +5210,7 @@ jQuery.event = {
 		if ( delegateCount &&
 
 			// Support: IE <=9
-			// var(--black)-hole SVG <use> instance trees (trac-13180)
+			// Black-hole SVG <use> instance trees (trac-13180)
 			cur.nodeType &&
 
 			// Support: Firefox <=42

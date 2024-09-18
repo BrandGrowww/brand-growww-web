@@ -2,7 +2,7 @@
 
 TemplateMo 568 DigiMedia
 
-https://templatemo.com/tm-568-DigiMedia
+https://templatemo.com/tm-568-digimedia
 
 */
 
@@ -1030,7 +1030,7 @@ About Style
 }
 
 .second-skill-item .progress .progress-bar {
-  border-color: var(--blue);
+  border-color: #726ae3;
 }
 
 .third-skill-item .progress .progress-bar {
@@ -1352,17 +1352,17 @@ Services Style
   margin-bottom: 25px;
 }
 
-.services .nacc .thumb .main-var(--white)-button {
+.services .nacc .thumb .main-white-button {
   text-align: right;
   margin-top: 40px;
 }
 
-.services .nacc .thumb .main-var(--white)-button a {
+.services .nacc .thumb .main-white-button a {
   background-color: #8d99af;
   color: #fff;
 }
 
-.services .nacc .thumb .main-var(--white)-button a i {
+.services .nacc .thumb .main-white-button a i {
   background-color: #fff;
   color: #8d99af;
 }
@@ -2061,7 +2061,7 @@ responsive
   .about-us .section-heading,
   .about-us .about-item,
   .about-us p,
-  .about-us .main-var(--green)-button {
+  .about-us .main-green-button {
     text-align: center;
   }
   .our-portfolio .section-heading .line-dec {
