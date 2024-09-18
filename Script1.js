@@ -1,47 +1,48 @@
+
+
+
 const dynamicTexts = ["Advance Automation", "Data Analytics", "Performance Marketing", "Algorithmic Training", "Up-to-date Technology"];
-const backgroundVideos = ["", "", "", "", ""];
-const isGif = [false, false, false, false, false];  // Update this array to reflect if the item is a GIF or a video
-
+const dynamicTextElement = document.getElementById("dynamic-text-container");
 let index = 0;
-
 function changeDynamicText() {
-    const dynamicTextElement = document.getElementById('dynamic-text-container');
-    const backgroundVideo = document.getElementById('background-video');
-    const backgroundGif = document.getElementById('background-gif');
 
-    // Clear previous text
-    dynamicTextElement.innerHTML = ''; // Use innerHTML to reset content
-
-    // Get the new text from the dynamicTexts array
     const text = dynamicTexts[index];
+    dynamicTextElement.innerHTML = '';
 
-    // Create spans for each letter and add animation delay
-    text.split('').forEach((letter, i) => {
+    text.split('').forEach((char, i) => {
         const span = document.createElement('span');
-        span.className = 'dynamic-text-letter';
+        span.className = 'dynamic-text-letter expertise';
         span.style.setProperty('--animation-delay', `${i * 0.2}s`);
-        span.textContent = letter;
+        span.textContent = char === ' ' ? '\u00A0' : char;
+
         dynamicTextElement.appendChild(span);
     });
-
-    // Update the background element based on the type (GIF or video)
-    if (isGif[index]) {
-        backgroundGif.src = backgroundVideos[index];
-        backgroundGif.style.display = 'block';
-        backgroundVideo.style.display = 'none';
-    } else {
-        backgroundVideo.src = backgroundVideos[index];
-        backgroundVideo.style.display = 'block';
-        backgroundGif.style.display = 'none';
-        backgroundVideo.play();
-    }
-
-    // Update index for the next text
     index = (index + 1) % dynamicTexts.length;
 }
-
-// Change text every 5 seconds
 setInterval(changeDynamicText, 5000);
-
-// Call the function initially to display the first text right away
 changeDynamicText();
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.stats__count');
+
+    
+    const speeds = [200, 30000, 1000, 2500];
+
+    counters.forEach((counter, index) => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const increment = target / speeds[index];
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 50);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    });
+});
+
