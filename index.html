@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>BrandGrowww - Creative SEO </title>
+    
+    <link rel="icon" href="assets/images/brand_logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/brand_logo.png">
+    <title>BrandGrowww</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/StyleSheet1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
@@ -57,7 +60,8 @@
     <!-- Pre-header Starts -->
     <!-- Pre-header End -->
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.5s" data-wow-delay="0s">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -88,7 +92,7 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.1s">
         <div class="container">
             <div class="row" style="margin-top:-90px">
                 <div class="col-lg-12">
@@ -155,32 +159,137 @@
                     </div>
                 </div>
             </div>
-
-<!--             <div class="clients-container">
-                <div class="owl-carousel">
-                    <a href="#0" title="Godrej" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Godrej" class="client-logo"></a>
-                    <a href="#0" title="Wipro" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Wipro" class="client-logo"></a>
-                    <a href="#0" title="HealthAid" class="clients__slide"><img src="assets/images/clients/client1.png" alt="HealthAid" class="client-logo"></a>
-                    <a href="#0" title="Himalaya" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Himalaya" class="client-logo"></a>
-                    <a href="#0" title="Hyuman" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Hyuman" class="client-logo"></a>
-                    <a href="#0" title="Dr.reddy" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Dr.reddy" class="client-logo"></a>
-                    <a href="#0" title="Absorbia" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Absorbia" class="client-logo"></a>
-                </div>
-            </div> -->
-
         </div>
 
-                    <div class="clients-container">
-                <div class="owl-carousel">
-                    <a href="#0" title="Godrej" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Godrej" class="client-logo"></a>
-                    <a href="#0" title="Wipro" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Wipro" class="client-logo"></a>
-                    <a href="#0" title="HealthAid" class="clients__slide"><img src="assets/images/clients/client1.png" alt="HealthAid" class="client-logo"></a>
-                    <a href="#0" title="Himalaya" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Himalaya" class="client-logo"></a>
-                    <a href="#0" title="Hyuman" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Hyuman" class="client-logo"></a>
-                    <a href="#0" title="Dr.reddy" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Dr.reddy" class="client-logo"></a>
-                    <a href="#0" title="Absorbia" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Absorbia" class="client-logo"></a>
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        
+        <div class="clients-container">
+            <div class="slick-carousel">
+                <a href="#0" title="Godrej"><img src="assets/images/clients/client1.png" alt="Godrej" class="client-logo"></a>
+                <a href="#0" title="Wipro"><img src="assets/images/clients/client2.png" alt="Wipro" class="client-logo"></a>
+                <a href="#0" title="HealthAid"><img src="assets/images/clients/client3.png" alt="HealthAid" class="client-logo"></a>
+                <a href="#0" title="Himalaya"><img src="assets/images/clients/client4.png" alt="Himalaya" class="client-logo"></a>
+                <a href="#0" title="Hyuman"><img src="assets/images/clients/client5.png" alt="Hyuman" class="client-logo"></a>
+                <a href="#0" title="Dr.reddy"><img src="assets/images/clients/client6.png" alt="Dr.reddy" class="client-logo"></a>
+            </div>
+        </div>
+        
+        <script>
+            $(document).ready(function(){
+                $('.slick-carousel').slick({
+                    infinite: true,
+                    slidesToShow: 5, // Show as many slides as you need
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 0, // Continuous scrolling
+                    speed: 3000, // Scrolling speed
+                    cssEase: 'linear',
+                    pauseOnHover: true,
+                });
+            });
+        </script> -->
+
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <div class="clients-container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/clients/client1.png" alt="Godrej" class="client-logo"></div>
+                    <div class="swiper-slide"><img src="assets/images/clients/client2.png" alt="Wipro" class="client-logo"></div>
+                    <div class="swiper-slide"><img src="assets/images/clients/client3.png" alt="HealthAid" class="client-logo"></div>
+                    <div class="swiper-slide"><img src="assets/images/clients/client4.png" alt="Himalaya" class="client-logo"></div>
+                    <div class="swiper-slide"><img src="assets/images/clients/client5.png" alt="Hyuman" class="client-logo"></div>
+                    <div class="swiper-slide"><img src="assets/images/clients/client6.png" alt="Dr.reddy" class="client-logo"></div>
                 </div>
             </div>
+        </div>
+        
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 5,
+                spaceBetween: 20,
+                loop: true, // Enable infinite loop
+                autoplay: {
+                    delay: 0, // Continuous autoplay
+                    disableOnInteraction: false, // Don't stop autoplay on interactions
+                },
+                speed: 1000, // Scroll speed
+                pauseOnMouseEnter: true, // Pause on hover
+            });
+        </script> -->
+
+        <div class="clients-container">
+            <div class="clients-wrapper">
+                <div class="clients-scroll">
+                    <a href="https://www.google.com" target="_blank" title="Godrej" class="clients__slide"><img src="assets/images/clients/client1.png" alt="Godrej" class="client-logo"></a>
+                    <a href="#0" title="Wipro" class="clients__slide"><img src="assets/images/clients/client2.png" alt="Wipro" class="client-logo"></a>
+                    <a href="#0" title="HealthAid" class="clients__slide"><img src="assets/images/clients/client3.png" alt="HealthAid" class="client-logo"></a>
+                    <a href="#0" title="Himalaya" class="clients__slide"><img src="assets/images/clients/client4.png" alt="Himalaya" class="client-logo"></a>
+                    <a href="#0" title="Hyuman" class="clients__slide"><img src="assets/images/clients/client5.png" alt="Hyuman" class="client-logo"></a>
+                    <a href="#0" title="Dr.reddy" class="clients__slide"><img src="assets/images/clients/client6.png" alt="Dr.reddy" class="client-logo"></a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            /* Full-width container */
+            .clients-container {
+                margin-top: 100px; /* Adjust the value as needed to increase the space */
+                overflow: hidden;
+                width: 100vw; /* Full width of the viewport */
+            }
+            
+            /* Wrapping the scroll area */
+            .clients-wrapper {
+                display: flex;
+                justify-content: center; /* Align in center */
+                width: 100%;
+            }
+            
+            /* Scrolling area */
+            .clients-scroll {
+                display: flex;
+                gap: 250px; /* Adds space between the images */
+                animation: scroll 10s linear infinite;
+                align-items: center; /* Ensure all images are vertically centered */
+            }
+            
+            /* Images */
+            .clients__slide img {
+                width: 300em;
+                height: auto;
+                vertical-align: middle; /* Vertically center the images */
+            }
+            
+            /* Keyframes for the continuous scroll */
+            @keyframes scroll {
+                0% {
+                    transform: translateX(100%);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+            
+            /* Pause animation on hover */
+            .clients-scroll:hover {
+                animation-play-state: paused;
+            }
+            </style>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.clients-scroll').hover(function(){
+                    $(this).css('animation-play-state', 'paused');
+                }, function(){
+                    $(this).css('animation-play-state', 'running');
+                });
+            });
+        </script>
 
     </div>
 
@@ -191,11 +300,11 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="about-left-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="about-left-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
                                 <img src="assets/images/about-dec.png" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s">
                             <div class="about-right-content">
                                 <div class="section-heading">
                                     <h6>About Us</h6>
@@ -237,13 +346,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 pb-0">
-                    <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
                         <h6>What We Do</h6>
                         <h4>launch and grow <span style="color:var(--green);">Businesses</span></h4>
                         <div class="line-dec"></div>
                     </div>
                 </div>
-                <div class="col-lg-12 mt-0">
+                <div class="col-lg-12 mt-0 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
                     <div class="naccs">
                         <div class="grid">
                             <div class="row">
@@ -309,13 +418,15 @@
                                                             <div class="left-text">
                                                                 <h4>Ads management to drive targeted traffic &amp; boost conversions </h4>
                                                                 <p>
-                                                                    Boost your growth with our effective and affordable PPC service.
+                                                                    <span style="color: var(--customgray);">We tailor our ads to reach your audience efficiently, ensuring cost-effective and high-performing campaigns that convert.</span>
                                                                 </p>
                                                                 <div class="ticks-list">
-                                                                    <span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                    <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span>
+                                                                    <span><i class="fa fa-check"></i> Optimized Templates for Impactful Ads</span> 
+                                                                    <span><i class="fa fa-check"></i> Data-Driven Insights</span>
+                                                                    <span><i class="fa fa-check"></i> Strategic Ad Management for Lower ACOS</span>
+                                                                    <span><i class="fa fa-check"></i> Transparent Reporting for Performance Clarity</span>
                                                                 </div>
-                                                                <p>Expect higher profis, lower ACOS, and clear ad management.</p>
+                                                                <p><span style="color: var(--customgray);">higher profits, lower ACOS, and seamless ad operations. </span></span></span> </p>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 align-self-center">
@@ -333,15 +444,17 @@
                                                     <div class="row">
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="left-text">
-                                                                <h4>Unified Reporting</h4>
+                                                                <h4>Efficient management for hassle-free operations</h4>
                                                                 <p>
-                                                                    Streamline your operations with our full account management, freeing up your time, reducing stress, and ensuring peace of mind.
+                                                                    <span style="color: var(--customgray);">Our dedicated account managers ensure smooth functioning of your seller accounts, from performance monitoring to compliance management.</span>
                                                                 </p>
                                                                 <div class="ticks-list">
-                                                                    <span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                    <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span>
+                                                                    <span><i class="fa fa-check"></i> Comprehensive Account Audits</span> 
+                                                                    <span><i class="fa fa-check"></i> Performance Optimization</span>
+                                                                    <span><i class="fa fa-check"></i> Compliance and Policy Adherence</span>
+                                                                    <span><i class="fa fa-check"></i> Ongoing Support and Reporting</span>
                                                                 </div>
-                                                                <p>Get a holistic view of your e-commerce performance with unified reporting and attribution across all your platforms.</p>
+                                                                <p><span style="color: var(--customgray);">Minimize risks, maximize your business growth. Stay ahead of challenges with expert account handling.</span></span></span> </p>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 align-self-center">
@@ -359,15 +472,23 @@
                                                     <div class="row">
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="left-text">
-                                                                <h4>Effortless Operations Management</h4>
+                                                                <h4>Optimize your product listings for better visibility and sales.</h4>
                                                                 <p>
-                                                                    Improve your sales with better listings. We assist in creating them by analyzing recent trends and aligning with your brand theme for engaging and high-converting listings.
+                                                                    <span style="color: var(--customgray);">
+                                                                        We create compelling product listings that attract buyers and improve conversion rates.
+                                                                    </span>
                                                                 </p>
+
                                                                 <div class="ticks-list">
-                                                                    <span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                    <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span>
+                                                                    <span><i class="fa fa-check"></i> Keyword-Optimized Titles and Descriptions</span> 
+                                                                    <span><i class="fa fa-check"></i> High-Quality Image and Video Integration</span>
+                                                                    <span><i class="fa fa-check"></i> Bullet Points Highlighting Key Features</span>
+                                                                    <span><i class="fa fa-check"></i> A/B Testing for Best Results</span>
+                                                                    <span><i class="fa fa-check"></i> SEO-Enriched Content</span>
                                                                 </div>
-                                                                <p>Eliminate the hassle of e-commerce management. From brand registry to purchase order tracking and management, get everything handled, allowing you to concentrate on scaling your business.</p>
+                                                                <p><span style="color: var(--customgray);">
+                                                                    Increase your product visibility and outshine competitors. Let your products speak for themselves with professional listings.
+                                                                </span></p>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 align-self-center">
@@ -385,15 +506,22 @@
                                                     <div class="row">
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="left-text">
-                                                                <h4>Strategic Thinking </h4>
+                                                                <h4>Launch your products with a strategic approach for maximum impact</h4>
                                                                 <p>
-                                                                    Launch your Products on multiple E-Commerce platform with our help for higher sales and success. We use SEO, PPC, design, and Optimization for impactful launches.
+                                                                    <span style="color: var(--customgray);">
+                                                                        Our tailored product launch strategies ensure that your products hit the market with maximum exposure.
+                                                                    </span>
                                                                 </p>
                                                                 <div class="ticks-list">
-                                                                    <span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                    <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span>
+                                                                    <span><i class="fa fa-check"></i> Pre-Launch Market Research and Analysis</span>
+                                                                    <span><i class="fa fa-check"></i> SEO and PPC Integration</span>
+                                                                    <span><i class="fa fa-check"></i> Promotional Campaigns to Drive Traffic</span>
+                                                                    <span><i class="fa fa-check"></i> Influencer and Social Media Marketing</span>
+                                                                    <span><i class="fa fa-check"></i> Post-Launch Performance Tracking</span>
                                                                 </div>
-                                                                <p>Our proven strategies will optimize your Amazon PPC campaigns for maximum impact.</p>
+                                                                <p><span style="color: var(--customgray);">
+                                                                    Get the attention your new product deserves. Launch your product with confidence and precision.
+                                                                </span></p>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 align-self-center">
@@ -411,15 +539,15 @@
                                                     <div class="row">
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="left-text">
-                                                                <h4>Design a Visually Appealing and User-Friendly Brand Store</h4>
-                                                                <p>
+                                                                <h4><span style="color: var(--customgray);">Design a Visually Appealing and User-Friendly Brand Store</span></h4>
+                                                                <p><span style="color: var(--customgray);">
                                                                     Build a stronger brand presence with compelling content and visuals. Our optimized brand stores aim to boost customer conversions.
-                                                                </p>
+                                                                </span></p>
                                                                 <div class="ticks-list">
                                                                     <span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
                                                                     <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span>
                                                                 </div>
-                                                                <p>Compelling Product Listings That Convert.</p>
+                                                                <p><span style="color: var(--customgray);">Compelling Product Listings That Convert.</span></p>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 align-self-center">
@@ -557,7 +685,7 @@
         }
     </style>
 
-    <div id="free-quote" class="free-quote" style="background-color:var(--blue) !important;">
+    <!-- <div id="free-quote" class="free-quote" style="background-color:var(--blue) !important;">
         <div class="container">
             <div class="row">
                 <div class="row offset-lg-12">
@@ -587,10 +715,7 @@
                         </div>
                         <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
 
-                            <!--<a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
-        </a>-->
                             <div class="carousel-inner">
 
                                 <div class="carousel-item active">
@@ -632,19 +757,17 @@
                                     </div>
                                 </div>
 
-                            </div><!-- end carousel-inner -->
-                            <!--<a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </div>
+                            
+                        </div>
+                        
 
-        </a>-->
-                        </div><!-- end carousel -->
-
-                    </div> <!-- end col-full -->
-                    </div> <!-- end clients-testimonials -->
+                    </div> 
+                    </div> 
               
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!--<div id="free-quote" class="free-quote" style="background-color: var(--blue) !important; padding: 50px 0;">
@@ -687,7 +810,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="section-heading wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.2s">
                         <h6>Our Portofolio</h6>
                         <h4>See Our Recent <span style="color:var(--green);">Projects</span></h4>
                         <div class="line-dec"></div>
@@ -695,7 +818,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+        <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="loop owl-carousel">
@@ -706,7 +829,7 @@
                                         <img src="assets/images/portfolio-01.jpg" alt="">
                                     </div>
                                     <div class="down-content">
-                                        <h4>Website Builder</h4>
+                                        <h4>Website Builder 1</h4>
                                         <span>Marketing</span>
                                     </div>
                                 </div>
@@ -719,46 +842,7 @@
                                         <img src="assets/images/portfolio-01.jpg" alt="">
                                     </div>
                                     <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="assets/images/portfolio-02.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="assets/images/portfolio-03.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
-                                        <span>Marketing</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="assets/images/portfolio-04.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Website Builder</h4>
+                                        <h4>Website Builder 2</h4>
                                         <span>Marketing</span>
                                     </div>
                                 </div>
@@ -769,6 +853,7 @@
             </div>
         </div>
     </div>
+
 
     <!--<div id="blog" class="blog">
         <div class="container">
@@ -853,9 +938,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <h6>Contact Us</h6>
-                        <h4>Get In Touch With Us <span style="color:var(--green);">Now</span></h4>
+                        <h4>Get In Touch <span style="color:var(--green);">With Us Now</span></h4>
                         <div class="line-dec"></div>
                     </div>
                 </div>
@@ -869,7 +954,9 @@
                             </div>
                             <div class="col-lg-5">
                                 <div id="map">
-                                    <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    <iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    
+
                                 </div>
                             </div>
                             <div class="col-lg-7">
@@ -879,7 +966,7 @@
                                             <div class="info-post">
                                                 <div class="icon">
                                                     <img src="assets/images/phone-icon.png" alt="">
-                                                    <a href="#">010-020-0340</a>
+                                                    <a href="#">(+91) 750384XXXX</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -887,7 +974,7 @@
                                             <div class="info-post">
                                                 <div class="icon">
                                                     <img src="assets/images/email-icon.png" alt="">
-                                                    <a href="#">our@email.com</a>
+                                                    <a href="mailto:info@brandgrowww.com" class="email-link">info@brandgrowww.com</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -895,10 +982,12 @@
                                             <div class="info-post">
                                                 <div class="icon">
                                                     <img src="assets/images/location-icon.png" alt="">
-                                                    <a href="#">123 Rio de Janeiro</a>
+                                                    <a href="https://maps.app.goo.gl/RHcaLh7615tLVry67" target="_blank">Delhi, India</a>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        
                                         <div class="col-lg-6">
                                             <fieldset>
                                                 <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
