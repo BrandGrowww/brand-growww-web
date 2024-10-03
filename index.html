@@ -111,7 +111,7 @@
                                                     Data-Driven E-commerce
                                                 </span>
                                                 <br />
-                                                <!--<span id="dynamic-text-container" style="font-weight: 500;font-style: normal;color:var(--green) !important">
+                                                <span id="dynamic-text-container" style="font-weight: 500;font-style: normal;color:var(--green) !important">
                                                     <span class="dynamic-text-letter expertise">E</span>
                                                     <span class="dynamic-text-letter expertise">x</span>
                                                     <span class="dynamic-text-letter expertise">p</span>
@@ -121,69 +121,15 @@
                                                     <span class="dynamic-text-letter expertise">i</span>
                                                     <span class="dynamic-text-letter expertise">s</span>
                                                     <span class="dynamic-text-letter expertise">e</span>
-                                                </span>-->
-                                                <style>
-                                                    #container {
-                                                        display: flex;
-                                                      
-                                                        font-size: 38px;
-                                                    }
+                                                </span>
 
-                                                    .text {
-                                                        margin: 0 10px;
-                                                        opacity: 0;
-                                                        transition: opacity 0.5s;
-                                                    }
-                                                </style>
-
-                                                <div id="container">
-                                                    
-
-                                                <div class="text" id="text1" style="margin-left:0px;font-weight: 500;font-style: normal;color:var(--green) !important"></div>
-                                                <div class="text" id="text2" style="margin-left: 0px; font-weight: 500; font-style: normal; color: var(--green) !important"></div>
-                                                
-                                                    <script>
-                                                    const pairs = [
-                                                        ['Advance', 'Automation'], ['Data', 'Analytics'], ['Performance', 'Marketing'], ['Algorithmic',' Training'],['Up-to-date', 'Technology']
-                                                     ];
-                                                    let currentIndex = 0;
-
-                                                    function showTexts() {
-                                                        const [text1, text2] = pairs[currentIndex];
-                                                        const el1 = document.getElementById('text1');
-                                                        const el2 = document.getElementById('text2');
-
-                                                        // Show first text
-                                                        el1.textContent = text1;
-                                                        el1.style.opacity = 1;
-
-                                                        setTimeout(() => {
-                                                            // Show second text
-                                                            el2.textContent = text2;
-                                                            el2.style.opacity = 1;
-
-                                                            setTimeout(() => {
-                                                                // Fade out both texts
-                                                                el1.style.opacity = 0;
-                                                                el2.style.opacity = 0;
-                                                            }, 2000); // Show for 2 seconds after both are visible
-                                                        }, 1000); // Delay before showing the second text
-
-                                                        currentIndex = (currentIndex + 1) % pairs.length;
-
-                                                        setTimeout(showTexts, 4000); // Wait for total of 4 seconds before showing the next pair
-                                                    }
-
-                                                    showTexts();
-                                                </script>
-                                                    </div>
                                                 <!--<div id="dynamic-text-container" style="font-weight: 500;font-style: normal;color:var(--green) !important">-->
                                                 <!-- The dynamic text will be inserted here -->
                                                 <!--</div>-->
 
                                                 <span class="q">
                                                     <!--style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 1.9);"-->
-                                                    <br />&nbsp;For All
+                                                    <br />For All
                                                 </span>
                                             </h1>
 
