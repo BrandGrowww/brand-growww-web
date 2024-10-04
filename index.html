@@ -351,7 +351,7 @@
                         <div class="line-dec"></div>
                     </div>
                 </div>
-<!--                 <div class="col-lg-12 mt-0 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s"> -->
+                <!--                 <div class="col-lg-12 mt-0 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s"> -->
                 <div class="col-lg-12 mt-0">
                     <div class="naccs">
                         <div class="grid">
@@ -1553,6 +1553,190 @@
         </script>
     </div>
 
+
+
+
+
+    <div class="m-5 ">
+        <div class="thumb m-5">
+            <div class="row mx-5 border rounded p-5"  style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <div class="col-lg-6 px-5 align-self-center">
+                    <div class="left-text">
+                        <div class="section-heading">
+                            <h6>Benchmark Data Selection</h6>
+                            <h4>Quick <span class="text-success">Dashboard</span></h4>
+                            <!--<div class="line-dec"></div>-->
+                        </div>
+                        <!--<h4>Benchmark Data Selection</h4>-->
+                        <form id="benchmarkForm">
+                            <label for="month" style="color:var(--green)">Select Month:</label>
+                            <select id="month" class="form-control">
+                                <option value="" disabled selected>Select Month</option>
+                            </select>
+                            <br>
+                            <label for="subcategory" style="color:var(--green)">Select Subcategory:</label>
+                            <select id="subcategory" class="form-control" disabled>
+                                <option value="" disabled selected>Select Subcategory</option>
+                            </select>
+                            <br>
+                            <button type="submit" class="btn btn-primary" style="background-color:var(--green) !important;" disabled>Get Data</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-5 p-5 align-self-center">
+                   
+                    <div class="right-text">
+                        <div class="section-heading">
+                            <h6>Subcategory Results</h6>
+                            <!--<h4>Quick <span class="text-success">Dashboard</span></h4>-->
+                            <!--<div class="line-dec"></div>-->
+                        </div>
+                        <h4 id="subcategoryHeading" class="text-success"></span>Select the Category</h4>
+                        <p id="cpc"><strong>CPC:</strong> </p>
+                        <p id="roas"><b>ROAS:</b></p>
+                        <div id="results" style="display: none;">
+                            <!-- Results will be dynamically updated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const monthDropdown = document.getElementById('month');
+            const subcategoryDropdown = document.getElementById('subcategory');
+            const form = document.getElementById('benchmarkForm');
+            const submitButton = form.querySelector('button[type="submit"]');
+            const results = document.getElementById('results');
+            const subcategoryHeading = document.getElementById('subcategoryHeading');
+            const cpc = document.getElementById('cpc');
+            const roas = document.getElementById('roas');
+
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const monthFiles = {
+                'Jan': 'Category_Benchmarks_Jan_2024.json',
+                'Feb': 'Category_Benchmarks_Feb_2024.json',
+                'Mar': 'Category_Benchmarks_Mar_2023.json',
+                'Apr': 'Category_Benchmarks_Apr_2023 (1).json',
+                'May': 'Category_Benchmarks_May_2023.json',
+                'Jun': 'Category_Benchmarks_Jun_2023.json',
+                'Jul': 'Category_Benchmarks_Jul_2023.json',
+                'Aug': 'Category_Benchmarks_Aug_2023.json',
+                'Sep': 'Category_Benchmarks_Sep_2023.json',
+                'Oct': 'Category_Benchmarks_Oct_2023.json',
+                'Nov': 'Category_Benchmarks_Nov_2023.json',
+                'Dec': 'Category_Benchmarks_Dec_2023.json'
+            };
+
+            // Populate the month dropdown
+            months.forEach(month => {
+                const option = document.createElement('option');
+                option.value = month;
+                option.textContent = month;
+                monthDropdown.appendChild(option);
+            });
+
+            // Load subcategories when a month is selected
+            monthDropdown.addEventListener('change', () => {
+                const selectedMonth = monthDropdown.value;
+                const file = monthFiles[selectedMonth];
+
+                console.log(`Selected month: ${selectedMonth}, file: ${file}`);
+
+                subcategoryDropdown.innerHTML = '<option value="" disabled selected>Select Subcategory</option>'; // Clear previous options and add "Select Subcategory"
+
+                if (file) {
+                    fetch(file)
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Fetched data:', data);
+
+                            data.SP.forEach(subcategory => {
+                                const option = document.createElement('option');
+                                option.value = subcategory['Subcategory Name'];
+                                option.textContent = subcategory['Subcategory Name'];
+                                subcategoryDropdown.appendChild(option);
+                            });
+                            subcategoryDropdown.disabled = false;
+                            submitButton.disabled = false;
+                        })
+                        .catch(error => {
+                            console.error('Error fetching subcategories:', error);
+                            subcategoryDropdown.disabled = true;
+                            submitButton.disabled = true;
+                        });
+                } else {
+                    subcategoryDropdown.disabled = true;
+                    submitButton.disabled = true;
+                }
+            });
+
+
+            form.addEventListener('submit', event => {
+                event.preventDefault();
+
+                const selectedMonth = monthDropdown.value;
+                const selectedSubcategory = subcategoryDropdown.value;
+                const file = monthFiles[selectedMonth];
+
+                console.log(`Submitting form with month: ${selectedMonth}, subcategory: ${selectedSubcategory}`);
+
+                if (file) {
+                    fetch(file)
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Fetched data on submit:', data);
+
+                            const subcategoryData = data.SP.find(item => item['Subcategory Name'] === selectedSubcategory);
+
+                            console.log('Subcategory data:', subcategoryData);
+
+                            if (subcategoryData) {
+                                subcategoryHeading.textContent = selectedSubcategory;
+                                cpc.textContent = `CPC: ${parseFloat(subcategoryData.CPC).toFixed(1)}`;
+                                roas.textContent = `ROAS: ${parseFloat(subcategoryData.ROAS).toFixed(1)}`;
+                                results.style.display = 'block';
+                            } else {
+
+                                console.error('No subcategory data found');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error fetching subcategory data:', error);
+                        });
+                } else {
+                    console.error('File not found');
+                }
+            });
+
+            // Trigger change event to reset the subcategory dropdown
+            monthDropdown.dispatchEvent(new Event('change'));
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div id="contact" class="contact-us section">
         <div class="container">
             <div class="row">
@@ -1644,7 +1828,7 @@
                 <div class="col-lg-12">
                     <p>
                         Copyright © 2022 BrandGrowww. All Rights Reserved.
-                   </p>
+                    </p>
                 </div>
             </div>
         </div>
@@ -1671,19 +1855,19 @@
                         items: 3
                     },
                     800: {
-                        items: 4 
+                        items: 4
                     },
                     1000: {
-                        items: 5 
+                        items: 5
                     },
                     1200: {
-                        items: 6 
+                        items: 6
                     },
                     1400: {
-                        items: 7 
+                        items: 7
                     },
                     1800: {
-                        items: 8 
+                        items: 8
                     }
                 }
             });
